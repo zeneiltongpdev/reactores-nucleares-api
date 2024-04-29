@@ -1,0 +1,131 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Nuclear Reactors API",
+    "version": "4.11.1",
+    "description": "API for manipulation of nuclear research reactor data."
+  },
+  "paths": {
+    "/reactors": {
+      "get": {
+        "summary": "Get all reactors",
+        "responses": {
+          "200": {
+            "description": "List of reactors"
+          }
+        }
+      }
+    },
+    "/insert_reactors": {
+      "post": {
+        "summary": "Create a new reactor",
+        "parameters": [
+          {
+            "name": "Reactor",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "country": { "type": "string" },
+                "city": { "type": "string" },
+                "type": { "type": "string" },
+                "thermal_power_kw": { "type": "number" },
+                "status ": { "type": "string" },
+                "first_reaction_date": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Reactor created successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reactor_id": { "type": "string" },
+                "mongo_id": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reactors/{reactor_name}": {
+      "get": {
+        "summary": "Get reactor by name",
+        "parameters": [
+          {
+            "name": "reactor_name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Reactor information"
+          }
+        }
+      }
+    },
+    "/reactors/{reactor_id}": {
+      "put": {
+        "summary": "Update reactor",
+        "parameters": [
+          {
+            "name": "reactor_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Reactor",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "country": { "type": "string" },
+                "city": { "type": "string" },
+                "type": { "type": "string" },
+                "thermal_power_kw": { "type": "number" },
+                "status ": { "type": "string" },
+                "first_reaction_date": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Reactor updated successfully"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete reactor",
+        "parameters": [
+          {
+            "name": "reactor_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Reactor deleted successfully"
+          }
+        }
+      }
+    }
+  }
+}
