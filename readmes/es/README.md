@@ -49,20 +49,20 @@ http://localhost:5000/api
 ```
 ### Rutas de la API
 - **GET /reactors**: Retorna todos los reactores registrados.
-- **GET /reactors/`{reactor_id}`**: Retorna información sobre un reactor específico.
+- **GET /reactors/{`reactor_id`}**: Retorna información sobre un reactor específico.
 - **POST /reactors**: Crea un nuevo reactor.
-- **PUT /reactors/`{reactor_id}`**: Actualiza la información de un reactor existente.
-- **DELETE /reactors/`{reactor_id}`**: Elimina un reactor existente.
+- **PUT /reactors/{`reactor_id`}**: Actualiza la información de un reactor existente.
+- **DELETE /reactors/{`reactor_id`}**: Elimina un reactor existente.
 
 ### Estructura del Proyecto
 El proyecto tiene la siguiente estructura de directorios:
 
 - app: Contiene los archivos principales de la aplicación.
-    - controllers: Controladores de la aplicación.
-    - models: Modelos de datos de la aplicación.
-    - repositories: Repositorios para la interacción con la base de datos.
-    - services: Servicios para la ejecución de operaciones específicas.
-    - static: Contiene scripts utilitarios de configuración del Swagger.
+- controllers: Controladores de la aplicación.
+- models: Modelos de datos de la aplicación.
+- repositories: Repositorios para la interacción con la base de datos.
+- services: Servicios para la ejecución de operaciones específicas.
+- static: Contiene scripts utilitarios de configuración del Swagger.
 
 ### Consideraciones Finales:
 La aplicación Reactores Nucleares es una solución simple para la gestión de información sobre reactores nucleares, con funcionalidades básicas de $ CRUD $. Puede ser extendida y mejorada según sea necesario.
