@@ -22,25 +22,29 @@ A aplicação de Reactores Nucleares é um sistema para gerenciar informações 
 - MongoDB instalado e em execução na porta padrão (`27017`).
 
 ### Instalação das Dependências
-**Clone o repositório da aplicação:**
+**Clone o repositório da aplicação via SSH:**
+```bash
+git clone git@github.com:zeneiltongpdev/reactores-nucleares-api.git
 ```
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+**Clone o repositório da aplicação via HTTPS:**
+```bash
+git clone https://github.com/zeneiltongpdev/reactores-nucleares-api.git
 ```
 **Navegue até o diretório do projeto:**
-```
-cd nome-do-repositorio
+```bash
+cd reactores-nucleares-api
 ```
 **Instale as dependências utilizando pip:**
-```
+```bash
 pip install -r requirements.txt
 ```
 ### Execução da Aplicação
 **Execute o arquivo app.py:**
-```
+```bash
 python app.py
 ```
 **Acesse a documentação da API através do navegador:**
-```
+```bash
 http://localhost:5000/api
 ```
 ## Rotas da API
